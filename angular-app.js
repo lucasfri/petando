@@ -13,7 +13,6 @@ myAngularApp.controller('mainController', function(){
 
 
   $scope.validate = function(){
-
     return $scope.yourName.length > 3;
   }
 }
