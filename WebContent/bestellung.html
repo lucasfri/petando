@@ -48,11 +48,22 @@
     </div>
   </div><br>
 
-<input class="headerControl login" type="password" id="password" placeholder="Password">
-    <input class="headerControl login" type="text" id="username" placeholder="Username">
-    <button id="loginButton" class="headerButton headerControl login" onclick="lovecat.login()">Login</button>
-    <button id="logoutButton" class="headerButton headerControl" onclick="lovecat.logout()">Logout</button>
-    <br> </br>
+<form action="login" method="post">
+   <table>
+   <tr>
+      <td><font face="verdana" size="2px">Name:</font></td>
+      <td><input type="text" name="userName"></td>
+   </tr>
+   <tr>
+      <td><font face="verdana" size="2px">Password:</font></td>
+      <td><input type="password" name="userPassword"></td>
+   </tr>
+   </table>
+      <input type="submit" value="Login">
+</form>
+
+
+    <br> 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
