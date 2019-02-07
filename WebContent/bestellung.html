@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+
+<html ng-app="myAngularApp" petando lang="en">
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Pentando Petsharing - Bestellseite</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #a3acff;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body ng-controller="mainController">
+
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Petando</h1>
+    <p>Pet sharing made with <span class="glyphicon glyphicon-heart"></span></p>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+<h1>Ihr Warenkorb</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Maik das Meerschweinchen</p>
+      <img src="meerschweinchen.jpg" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+  </div><br>
+
+<input class="headerControl login" type="password" id="password" placeholder="Password">
+    <input class="headerControl login" type="text" id="username" placeholder="Username">
+    <button id="loginButton" class="headerButton headerControl login" onclick="lovecat.login()">Login</button>
+    <button id="logoutButton" class="headerButton headerControl" onclick="lovecat.logout()">Logout</button>
+    <br> </br>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
