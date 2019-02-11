@@ -45,17 +45,20 @@ public class Login extends HttpServlet {
     		//Step 2: create a statement
     		stmt = con.createStatement();
     		
-    		String sql = "Select * from users where username '" + username;
-    		ResultSet result = stmt.executeQuery(sql);
+    		String sqlStr = "Select * from users where id= "
+    		+ "'" + username + "'" 
+    		+ "and password ='" + password + "'";
+    		ResultSet rset = stmt.executeQuery(sqlStr);
     		
-    		while (result.next()){
+    		//Step 4: Process the query result
+    		if (rset.first()){
     			System.out.println();
     			return true;
-    		}
-    	} catch (Exception e) {
-    		e.printStackTrace();
-    	}
-    	return false;
+    		} else {
+    			System.out.println("User" + username + "not allowed!");
+        		 return false;
+    			}}
+    		
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
