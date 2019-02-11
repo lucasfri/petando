@@ -6,6 +6,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,6 +40,9 @@ public class Login extends HttpServlet {
     	Statement stmt;
     	
     	try {
+    		
+    		
+    		//Class.forName("com.mysql.jdbc.Driver");
     		//Step 1: create a connection
     		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDb?useSSL=false", "root", "Hallolucas112");
     		//Step 2: create a statement
