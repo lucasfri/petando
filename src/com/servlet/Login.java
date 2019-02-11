@@ -33,13 +33,13 @@ public class Login extends HttpServlet {
 	
     private boolean validCredentials(String username, String password) {
     	
-    	
+
     	Connection con;
     	Statement stmt;
     	
     	try {
     		Class.forName("com.mysql.jdbc.Driver");
-    		
+
     		//Step 1: create a connection
     		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDb?useSSL=false", "root", "Hallolucas112");
     		//Step 2: create a statement
@@ -56,9 +56,16 @@ public class Login extends HttpServlet {
     			return true;
     		} else {
     			System.out.println("User" + username + "not allowed!");
-        		 return false;
-    			}}
+        		 
+    			}
     		
+    }catch (Exception e) {
+		// TODO: handle exception
+    	
+    	System.out.println("Geht nicht");
+    	
+	}
+		return false;
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
