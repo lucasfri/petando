@@ -31,22 +31,20 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	
-    private boolean validCredentials(String username, String password) {
+    private boolean validCredentials(String id, String password) {
     	
 
     	Connection con;
     	Statement stmt;
     	
     	try {
-    		Class.forName("com.mysql.jdbc.Driver");
-
     		//Step 1: create a connection
     		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDb?useSSL=false", "root", "Hallolucas112");
     		//Step 2: create a statement
     		stmt = con.createStatement();
     		
     		String sqlStr = "Select * from users where id= "
-    		+ "'" + username + "'" 
+    		+ "'" + id + "'" 
     		+ "and password ='" + password + "'";
     		ResultSet rset = stmt.executeQuery(sqlStr);
     		
@@ -55,7 +53,7 @@ public class Login extends HttpServlet {
     			System.out.println();
     			return true;
     		} else {
-    			System.out.println("User" + username + "not allowed!");
+    			System.out.println("User" + id + "not allowed!");
         		 
     			}
     		
@@ -63,6 +61,8 @@ public class Login extends HttpServlet {
 		// TODO: handle exception
     	
     	System.out.println("Geht nicht");
+        e.printStackTrace();
+
     	
 	}
 		return false;
