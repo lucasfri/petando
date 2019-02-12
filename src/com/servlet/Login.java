@@ -41,10 +41,8 @@ public class Login extends HttpServlet {
     	
     	try {
     		
-    		
-    		//Class.forName("com.mysql.jdbc.Driver");
-    		//Step 1: create a connection
-    		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDb?useSSL=false", "root", "Hallolucas112");
+       		//Step 1: create a connection
+    		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDb?useSSL=false", "root", "SETYOURPW");
     		//Step 2: create a statement
     		stmt = con.createStatement();
     		
