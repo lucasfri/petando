@@ -50,6 +50,8 @@ public class Login extends HttpServlet {
     		+ "'" + id + "'" 
     		+ "and password ='" + password + "'";
     		ResultSet rset = stmt.executeQuery(sqlStr);
+    		//WICHTIG
+    		
     		
     		//Step 4: Process the query result
     		if (rset.first()){
